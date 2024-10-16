@@ -2152,10 +2152,6 @@ int Hermes::rhs(BoutReal t) {
        mesh->communicate(denom);
        denom.applyParallelBoundary(parbc);
        
-       if (verbose){
-	 debug_denom = denom;
-       }
-      
        kappa_epar = div_all(kappa_epar,denom);
     }
 
